@@ -1,5 +1,5 @@
 import streamlit as st
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine
 from langchain_community.agent_toolkits import SQLDatabaseToolkit
 from langchain_community.utilities import SQLDatabase
 from langchain.agents.agent_toolkits import create_sql_agent
@@ -7,7 +7,7 @@ from langchain.chat_models import ChatOpenAI
 import re
 
 # ---- UI Elements ----
-st.title("🧠 Natural Language to SQL - Ask your Data")
+st.title("Talk To Your Database")
 
 # Initialize session state for connection objects
 if "db" not in st.session_state:
@@ -43,12 +43,13 @@ def setup_connection():
             raise ValueError("Unsupported DB type.")
 
         engine = create_engine(engine_url)
+        # Using include_tables and sample_rows_in_table_info for better schema understanding
         db = SQLDatabase(engine, sample_rows_in_table_info=2)
 
         llm = ChatOpenAI(
             openai_api_base="https://openrouter.ai/api/v1",
-            openai_api_key = st.secrets["OPENROUTER_API_KEY"],
-            model="openai/gpt-5-nano",
+            openai_api_key=st.secrets["OPENROUTER_API_KEY"],
+            model="mistralai/codestral-2508",
             temperature=0,
             max_tokens=512,
         )
@@ -74,37 +75,38 @@ if connect_clicked:
         st.success("✅ Connected to database and agent initialized!")
 
 # ---- Handle user query ----
-# Check if the connection objects exist in session state before showing the query box
 if st.session_state.agent_executor:
-    with st.expander("📋 Show Tables"):
+    # This expander now shows both table names and their full schemas
+    with st.expander("📋 Show Tables & Schemas"):
         try:
             tables = st.session_state.db.get_usable_table_names()
             st.write("Tables found:", tables)
+            
+            # Loop through each table to get and display its schema
+            for table in tables:
+                with st.expander(f"Schema for '{table}'"):
+                    table_info = st.session_state.db.get_table_info(table_names=[table])
+                    st.write("**Columns:**")
+                    # Use a regex to find all column names in the CREATE TABLE statement
+                    column_names = re.findall(r"(\w+)\s(?:SERIAL|VARCHAR|INTEGER|NUMERIC|DATE)", table_info)
+                    
+                    # Display the column names as a bulleted list
+                    for col in column_names:
+                        st.write(f"- {col}")
+                        
         except Exception as e:
-            st.error(f"Error listing tables: {e}")
+            st.error(f"Error listing tables or schemas: {e}")
 
     user_query = st.text_input("Ask your question:", placeholder="e.g., Which customer spent the most?")
 
     if user_query:
         with st.spinner("Thinking..."):
             try:
-                # Use the agent from session state
                 response = st.session_state.agent_executor.invoke({"input": user_query})
                 output_text = response.get("output", str(response))
-                match = re.search(r"Final Answer:\s*(.+)", output_text)
-
-                if match:
-                    st.success(match.group(1).strip())
-                else:
-                    st.info("🤖 Agent response:")
-                    st.code(output_text.strip())
+                st.info("🤖 Agent response:")
+                st.code(output_text.strip())
 
             except Exception as e:
-                match = re.search(r"Final Answer:\s*(.+)", str(e))
-                if match:
-                    st.success(f"(Recovered): {match.group(1).strip()}")
-                else:
-
-                    st.error(f"❌ Agent Error: {e}")
-
+                st.error(f"❌ Agent Error: {e}")
 

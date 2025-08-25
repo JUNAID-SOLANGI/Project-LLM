@@ -47,8 +47,8 @@ def setup_connection():
 
         llm = ChatOpenAI(
             openai_api_base="https://openrouter.ai/api/v1",
-            openai_api_key="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",
-            model="tngtech/deepseek-r1t2-chimera:free",
+            openai_api_key = st.secrets["OPENROUTER_API_KEY"],
+            model="moonshotai/kimi-k2:free",
             temperature=0,
             max_tokens=512,
         )
@@ -106,3 +106,4 @@ if st.session_state.agent_executor:
                 else:
 
                     st.error(f"❌ Agent Error: {e}")
+

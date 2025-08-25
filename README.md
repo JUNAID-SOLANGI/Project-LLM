@@ -1,8 +1,3 @@
-Sure! Here's a clean and concise `README.md` that **excludes** your API key and follows the structure you asked for:
-
----
-
-````markdown
 # 🧠 Talk To Your Database — LangChain + Streamlit + OpenRouter
 
 GitHub Repository – Well-structured README including project description, setup instructions, usage guide, and dependencies.

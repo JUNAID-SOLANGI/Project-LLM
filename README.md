@@ -1,9 +1,5 @@
 # 🧠 Talk To Your Database — LangChain + Streamlit + OpenRouter
 
-GitHub Repository – Well-structured README including project description, setup instructions, usage guide, and dependencies.
-
----
-
 ## 📌 Project Description
 
 This project allows users to interact with **SQL databases using natural language**. Built using:
@@ -88,14 +84,11 @@ streamlit run app.py
 
 ---
 
-## 🧠 Recommended Models
+## 🧠 Model Used
 
 | Model                           | Status            |
 | ------------------------------- | ----------------- |
-| `mistralai/codestral-2508`      | ✅ Excellent       |
-| `mistralai/mistral-7b-instruct` | ✅ Good            |
-| `gpt-3.5-turbo`                 | ✅ Reliable (Paid) |
-| `qwen:7b-coder`                 | ❌ Not recommended |
+| `mistralai/codestral-2508`      | ✅ Excellent      |
 
 ---
 
@@ -106,10 +99,3 @@ Built using:
 * [LangChain](https://github.com/langchain-ai/langchain)
 * [Streamlit](https://streamlit.io/)
 * [OpenRouter](https://openrouter.ai/)
-
-```
-
----
-
-Let me know if you’d like this turned into an actual file or need help updating your GitHub repo.
-```

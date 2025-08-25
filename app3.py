@@ -47,8 +47,8 @@ def setup_connection():
 
         llm = ChatOpenAI(
             openai_api_base="https://openrouter.ai/api/v1",
-            openai_api_key="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",
-            model="deepseek/deepseek-chat-v3.1",
+            openai_api_key="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",
+            model="tngtech/deepseek-r1t2-chimera:free",
             temperature=0,
             max_tokens=512,
         )
@@ -104,4 +104,5 @@ if st.session_state.agent_executor:
                 if match:
                     st.success(f"(Recovered): {match.group(1).strip()}")
                 else:
+
                     st.error(f"❌ Agent Error: {e}")

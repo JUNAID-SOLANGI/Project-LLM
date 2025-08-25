@@ -48,7 +48,7 @@ def setup_connection():
         llm = ChatOpenAI(
             openai_api_base="https://openrouter.ai/api/v1",
             openai_api_key = st.secrets["OPENROUTER_API_KEY"],
-            model="moonshotai/kimi-k2:free",
+            model="openai/gpt-5-nano",
             temperature=0,
             max_tokens=512,
         )
@@ -106,4 +106,5 @@ if st.session_state.agent_executor:
                 else:
 
                     st.error(f"❌ Agent Error: {e}")
+
 

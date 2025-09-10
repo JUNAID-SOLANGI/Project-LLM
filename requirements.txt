@@ -1,9 +1,8 @@
 streamlit
 sqlalchemy
-pymysql
-psycopg2-binary
 langchain
 langchain-community
 openai
-tiktoken
-python-dotenv
+pandas
+matplotlib
+plotly

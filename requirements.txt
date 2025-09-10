@@ -6,3 +6,5 @@ openai
 pandas
 matplotlib
 plotly
+psycopg2-binary
+mysqlclient

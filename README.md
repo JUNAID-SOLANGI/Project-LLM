@@ -24,6 +24,7 @@
   [![Stars](https://img.shields.io/github/stars/yourusername/talk-to-database?style=social)](https://github.com/yourusername/talk-to-database)
   
 </div>
+<img width="1344" height="768" alt="Gemini_Generated_Image_5fe59v5fe59v5fe5" src="https://github.com/user-attachments/assets/f7f676e3-7154-4750-9094-6cf8631145a7" />
 
 ## ✨ What Makes This Special
 

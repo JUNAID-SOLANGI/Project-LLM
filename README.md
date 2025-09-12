@@ -4,8 +4,19 @@
 
 <div align="center">
   
-  <!-- Replace this with your main demo GIF -->
+  <!-- Method 1: GitHub Video (Recommended) -->
+ 
+  
+  <!-- Alternative Method 2: If you convert to GIF -->
   <!-- ![Demo](./assets/demo.gif) -->
+  
+  <!-- Alternative Method 3: HTML5 video tag -->
+  <!-- 
+  <video width="800" controls>
+    <source src="https://github.com/user-attachments/assets/c580f022-bb74-418f-a621-c766e0ad5b8d" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  -->
   
   [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
   [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)](https://streamlit.io)
@@ -43,9 +54,6 @@ OPENROUTER_API_KEY = "your-openrouter-api-key-here"
 streamlit run app.py
 ```
 
-<!-- Replace with actual startup GIF -->
-<!-- ![Quick Start](./assets/quickstart.gif) -->
-
 ---
 
 ## 🎯 How It Works
@@ -62,8 +70,6 @@ streamlit run app.py
 </td>
 <td width="50%">
 
-<!-- Replace with connection demo -->
-<!-- ![Connect](./assets/connect.gif) -->
 **Supported Databases:**
 - PostgreSQL (Neon, Supabase)
 - MySQL
@@ -83,8 +89,9 @@ Natural language queries like:
 </td>
 <td width="50%">
 
-<!-- Replace with query demo -->
-<!-- ![Query](./assets/query.gif) -->
+**Example Demo:**
+
+https://github.com/user-attachments/assets/c580f022-bb74-418f-a621-c766e0ad5b8d
 
 </td>
 </tr>
@@ -101,8 +108,7 @@ Automatic chart detection:
 </td>
 <td width="50%">
 
-<!-- Replace with charts demo -->
-<!-- ![Charts](./assets/charts.gif) -->
+*See demo video above for live visualization examples*
 
 </td>
 </tr>
@@ -121,10 +127,10 @@ Automatic chart detection:
 | **Category + Numeric** | Bar Chart | Sales by region |
 | **Single Numeric** | Histogram | Price distribution |
 
-</div>
+**📹 See all visualization types in action:**
+https://github.com/user-attachments/assets/c580f022-bb74-418f-a621-c766e0ad5b8d
 
-<!-- Replace with visualization showcase -->
-<!-- ![Visualizations](./assets/visualizations.gif) -->
+</div>
 
 ---
 
@@ -174,9 +180,6 @@ Automatically displays:
 - ✅ All database tables
 - ✅ Column names and types
 - ✅ Sample data preview
-
-<!-- Replace with schema demo -->
-<!-- ![Schema](./assets/schema.gif) -->
 
 ### 🤖 Smart SQL Generation
 - Converts natural language to optimized SQL
@@ -236,9 +239,6 @@ else:
 "Show hiring trends over the past 2 years"
 ```
 </details>
-
-<!-- Replace with examples showcase -->
-<!-- ![Examples](./assets/examples.gif) -->
 
 ---
 
@@ -401,9 +401,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 <div align="center">
   <h3>🌟 If this project helped you, please give it a star! 🌟</h3>
   
-  <!-- Replace with footer animation -->
-  <!-- ![Footer](./assets/footer.gif) -->
-  
   <p><i>Made with ❤️ for the data community</i></p>
 </div>
 
@@ -432,39 +429,42 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
   
 </div>
 
-<!-- GIF Creation Instructions:
+---
 
-TO CREATE WORKING GIFS FOR YOUR README:
+## 🎬 Additional Video Resources
 
-1. Create an 'assets' folder in your repo root
-2. Record these GIFs using tools like:
-   - LICEcap (free, cross-platform)
-   - Kap (macOS)
-   - ScreenToGif (Windows)
-   - OBS Studio (all platforms)
+For more detailed walkthroughs and tutorials, check out these video demonstrations:
 
-3. Recommended settings:
-   - Resolution: 800x600 or 1024x768
-   - Frame rate: 10-15 fps
-   - Duration: 5-15 seconds
-   - File size: Under 10MB each
+**🎯 Main Demo:** https://github.com/user-attachments/assets/c580f022-bb74-418f-a621-c766e0ad5b8d
 
-4. Name your GIFs:
-   - demo.gif (main application demo)
-   - connect.gif (database connection process)
-   - query.gif (asking questions and getting SQL)
-   - charts.gif (automatic chart generation)
-   - schema.gif (schema exploration)
-   - examples.gif (multiple queries showcase)
-   - quickstart.gif (app startup)
-   - visualizations.gif (different chart types)
-   - footer.gif (closing animation)
+---
 
-5. Upload to ./assets/ folder and uncomment the image lines above
+<!-- IMPORTANT: Video Display Notes for GitHub
 
+GitHub handles videos in several ways:
 
+1. PREFERRED METHOD (used above):
+   - Simply paste the GitHub asset URL as plain text
+   - GitHub will automatically render it as an embedded video player
+   - Format: https://github.com/user-attachments/assets/[video-id]
 
+2. ALTERNATIVE METHODS:
+   
+   Method A: HTML5 Video Tag (may not work in all GitHub viewers)
+   <video width="800" controls>
+     <source src="your-video-url" type="video/mp4">
+   </video>
+   
+   Method B: Convert to GIF (always works but larger file size)
+   ![Demo](./assets/demo.gif)
+   
+   Method C: Link to video
+   [📹 Watch Demo Video](your-video-url)
 
+3. BEST PRACTICES:
+   - Keep videos under 25MB for GitHub
+   - Use .mp4 format for best compatibility
+   - Consider creating both video and GIF versions
+   - Add descriptive text around videos for context
 
 -->
-# https://github.com/user-attachments/assets/c580f022-bb74-418f-a621-c766e0ad5b8d
